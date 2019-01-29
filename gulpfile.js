@@ -15,15 +15,14 @@ gulp.task('start', function () {
         }
     });
 
-    gulp.watch("./styles/scss/*.scss", ['sass']);
-    gulp.watch("./styles/css/*.css", ['tailwind', browserSync.reload]);
+    gulp.watch("./styles/scss/*.scss", gulp.series('sass'));
+    gulp.watch("./styles/css/*.css", gulp.series('tailwind', browserSync.reload));
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function () {
     return gulp.src('./styles/scss/*.scss')
         .pipe(sass())
-        .on('error', swallowError)
         .pipe(gulp.dest('./styles/css'));
 });
 
@@ -33,14 +32,8 @@ gulp.task('tailwind', function () {
             tailwindcss('./tailwind.js'),
             autoprefixer,
         ]))
-        .on('error', swallowError)
         .pipe(gulp.dest('./styles/public/css/'))
 })
 
-gulp.task('default', ['start']);
+gulp.task('default', gulp.parallel('start'));
 
-function swallowError(error) {
-    // If you want details of the error in the console
-    console.log(error.toString())
-    this.emit('end')
-}
