@@ -9,13 +9,19 @@
     <title>Tailwind Boilerplate</title>
 </head>
 
-<body>
-    <header>
-        <h1>Hello World!</h1>
-    </header>
-    <button class="btn-blue hover:bg-indigo-dark">Yes</button>
+<body class="font-sans leading-normal">
+    <div class="container max-w-md mx-auto py-16 px-4">
+        <h1 class="text-purple mb-3 font-black hover:text-purple-dark">Tailwind starter kit!</h1>
+        <div class="text-grey-darker">
 
-
+            <button class="mb-3 rounded-full flex items-center shadow bg-purple px-4 py-2 text-white hover:bg-purple-light">
+                Default
+            </button>
+            <button class="flex items-center shadow border-purple border-2 rounded-full  px-4 py-2 text-blue hover:bg-purple hover:text-white">
+                Default
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>
