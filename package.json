@@ -12,6 +12,7 @@
     "gulp": "latest",
     "gulp-postcss": "latest",
     "gulp-sass": "latest",
+    "gulp-concat": "latest",
     "tailwindcss": "latest"
   }
 }
