@@ -1,0 +1,44 @@
+IMPORTANT!!!
+Set username and credential.helper locally only:
+git config user.name "hypnobluez"
+git config user.email "hypnobluez@gmail.com"
+git config --local credential.helper ""
+
+IMPORTANT!!!
+Control Panel >> Credential Manager and update git username.
+Otherwise, you won't be able to push
+
+Clear credential.helper
+git config --local credential.helper ""
+
+See where everything located
+git config --list --show-origin
+
+IMPORTANT!!! pulling first time
+git init [the folder]
+git remote add origin https://github.com/hypnobluez/tlw.git
+git fetch --all
+git pull --all
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+
+
+MERGING
+switch to master, then
+
+git merge dev
+
+git reset --hard HEAD
+
+git reset --hard HEAD^
+
+git reset HEAD script.js (to unstage if it was staged)
+
+git checkout HEAD^ script.js (go back to the previous commit if commited)
+
+git clean -d (cleans directories)
+git clean -f (cleans files)
+
+git log --oneline
+.gitignore to ignore files
+
+git push origin --all (pushes all branches)

@@ -1,0 +1,17 @@
+{
+  "name": "tlw",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "ht",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "latest"
+  },
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-postcss": "latest",
+    "gulp-sass": "latest",
+    "tailwindcss": "latest"
+  }
+}
