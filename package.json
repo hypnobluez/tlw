@@ -12,7 +12,9 @@
     "gulp": "latest",
     "gulp-postcss": "latest",
     "gulp-sass": "latest",
-    "gulp-concat": "latest",
-    "tailwindcss": "latest"
+    "tailwindcss": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-rename": "latest",
+    "del": "latest"
   }
 }
